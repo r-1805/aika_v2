@@ -5,6 +5,10 @@ export default defineConfig(async () => {
 
   return {
     base: '/aika/',
-    plugins: [react()]
+    plugins: [react()],
+    preview: {
+      // Разрешаем хост Render, который указан в ошибке
+      allowedHosts: ['aika-v21.onrender.com']
+    }
   }
 })
